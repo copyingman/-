@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Learning Flex</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		text-decoration: none;
+		list-style: none;
+		box-sizing: border-box;
+	}
+
+	body {
+		/* width: 1000px; */
+		margin: 0 auto;
+		background-color: #869960;
+	}
+
+	.container {
+		margin: 0 auto;
+		max-width: 940px;
+
+		padding: 20px;
+
+		background: url(../images/color-tile.png) left bottom repeat-x, url(../images/color-tile.png)left top repeat-x;
+		background-color: #fff;
+
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 87%;
+	}
+
+	/* 中間 */
+	.center {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.main-area {
+		padding-top: 10px;
+		padding-right: 10px;
+		border-top: #e5e9dc 3px solid;
+		width: 66%;
+	}
+
+	.main-area img {
+		width: 100%;
+	}
+
+	.sidebar {
+		/* margin-right: 5px; */
+		padding: 20px;
+		width: 34%;
+		background-color: #e5e9dc;
+	}
+
+	.header {
+		color: #617140;
+		background: url(../images/leaf-title.jpg);
+		background-position: right center;
+		background-repeat: no-repeat;
+		margin-bottom: 5px;
+		padding-bottom: 15px;
+	}
+
+	.header h1 {
+
+		margin-bottom: -5px;
+	}
+
+	.fa {
+		display: flex;
+		margin-left: -10px;
+		margin-top: 10px;
+	}
+
+	.fa .son {
+		position: relative;
+		margin-bottom: -25px;
+		padding: 5px 10px;
+	}
+
+	.fa .son .sona {
+		display: block;
+		padding: 5px 10px;
+		border: #e5e9dc 3px solid;
+		border-bottom: none;
+		color: #617140;
+	}
+
+
+	.sun {
+		padding: 5px 10px;
+		border: #e5e9dc 3px solid;
+		border-bottom: none;
+		color: #617140;
+		background-color: #e5e9dc;
+	}
+
+	.sun .suna {
+		color: #617140;
+	}
+
+	.sonul {
+		background-color: #646b53;
+		position: absolute;
+		display: none;
+	}
+
+	.fa .son .sona:hover {
+		background-color: #e5e9dc;
+	}
+
+	.son:hover .sonul {
+		display: block;
+	}
+
+	.sun:hover {
+		background-color: #869960;
+		color: #fff;
+	}
+
+
+	/* 脚 */
+	.footer {
+		padding: 30px;
+		margin-top: 10px;
+		text-align: center;
+		color: #999;
+
+		border-top: 3px solid #e5e9dc;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<header class="header">
+
+			<h1>Website Title</h1>
+			<p>Website slogan included here.</p>
+			<ul class="fa">
+				<li class="son">
+					<a href="" class="sona">Home</a>
+					<ul class="sonul">
+						<li class="sun"><a href="#" class="suna">link 1</a></li>
+						<li class="sun"><a href="#" class="suna">link 2</a></li>
+						<li class="sun"><a href="#" class="suna">link 3</a></li>
+					</ul>
+				</li>
+				<li class="son">
+					<a href="" class="sona">About</a>
+					<ul class="sonul">
+						<li class="sun"><a href="#" class="suna">link 1</a></li>
+						<li class="sun"><a href="#" class="suna">link 2</a></li>
+						<li class="sun"><a href="#" class="suna">link 3</a></li>
+					</ul>
+				</li>
+				<li class="son">
+					<a href="" class="sona">Portfolio</a>
+					<ul class="sonul">
+						<li class="sun"><a href="#" class="suna">link 1</a></li>
+						<li class="sun"><a href="#" class="suna">link 2</a></li>
+						<li class="sun"><a href="#" class="suna">link 3</a></li>
+					</ul>
+				</li>
+				<li class="son">
+					<a href="" class="sona">Contact Us</a>
+					<ul class="sonul">
+						<li class="sun"><a href="#" class="suna">link 1</a></li>
+						<li class="sun"><a href="#" class="suna">link 2</a></li>
+						<li class="sun"><a href="#" class="suna">link 3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</header>
+
+		<div class="center">
+			<article class="main-area">
+				<p>
+					This is the main area (or column). Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+					ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					This is the main area (or column). Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+				</p>
+				<img src="../images/leaf.jpg" alt="">
+				<p>ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					This is the main area (or column). Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+					ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					This is the main area (or column). Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+					ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article> <!-- article -->
+
+			<aside class="sidebar">
+				<p>
+					This is the sidebar. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
+				</p>
+			</aside><!-- sidebar -->
+		</div>
+
+		<footer class="footer">
+			<p>&copy; 2018 - This is the footer.</p>
+		</footer>
+	</div>
+
+</body>
+
+</html>
